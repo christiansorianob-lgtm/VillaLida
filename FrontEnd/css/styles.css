@@ -1,0 +1,312 @@
+/* ====================================================
+   FINCA VILLA LIDA — Custom Styles
+   Complementary to Tailwind CSS
+   ==================================================== */
+
+/* ---------- Base Reset & Typography ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Gradient Text Utilities ---------- */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #D4A843 0%, #f5d378 50%, #D4A843 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-green {
+  background: linear-gradient(135deg, #1a4a2e 0%, #52b788 60%, #2d6a4a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-transparent {
+  background: transparent;
+}
+
+.navbar-scrolled {
+  background: rgba(26, 74, 46, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+.nav-text-shadow {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #D4A843;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+
+/* ---------- Hero ---------- */
+.hero-bg {
+  background: linear-gradient(
+    160deg,
+    #0d2b1a 0%,
+    #1a4a2e 30%,
+    #2d6a4a 60%,
+    #1a3a25 100%
+  );
+}
+
+.hero-overlay {
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(212, 168, 67, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(82, 183, 136, 0.10) 0%, transparent 50%);
+}
+
+/* ---------- Scroll Indicator ---------- */
+.scroll-indicator {
+  width: 24px;
+  height: 38px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 12px;
+  position: relative;
+}
+
+.scroll-indicator::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 8px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 2px;
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+  50% { transform: translateX(-50%) translateY(10px); opacity: 0.3; }
+}
+
+
+/* ---------- Reveal on Scroll ---------- */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ---------- Lifecycle Cards ---------- */
+.lifecycle-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.previvero-card {
+  background: linear-gradient(135deg, #f0faf5 0%, #e8f7f0 100%);
+  border: 1px solid rgba(82, 183, 136, 0.2);
+}
+
+.vivero-card {
+  background: linear-gradient(135deg, #fdf6ee 0%, #faeee0 100%);
+  border: 1px solid rgba(139, 94, 60, 0.2);
+}
+
+.lifecycle-card::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: 0.05;
+}
+
+.previvero-card::before { background: #52b788; }
+.vivero-card::before { background: #8B5E3C; }
+
+
+/* ---------- Product Cards ---------- */
+.product-card {
+  background: #fff;
+  border: 1px solid rgba(26, 74, 46, 0.08);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+}
+
+.product-card:hover {
+  border-color: #52b788;
+  box-shadow: 0 20px 60px rgba(26, 74, 46, 0.12);
+  transform: translateY(-6px);
+}
+
+
+/* ---------- Gallery Cards ---------- */
+.gallery-card {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px) scale(1.01);
+}
+
+
+/* ---------- CTA Section ---------- */
+.cta-bg {
+  background: linear-gradient(135deg, #1a4a2e 0%, #2d6a4a 50%, #1a3a25 100%);
+  position: relative;
+}
+
+.cta-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(212, 168, 67, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(82, 183, 136, 0.10) 0%, transparent 50%);
+}
+
+
+/* ---------- Form Styles ---------- */
+.form-input {
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.form-input:focus {
+  background-color: #fff !important;
+}
+
+.form-input::placeholder {
+  color: #a0aec0;
+  font-style: normal;
+}
+
+/* Smooth field group transitions */
+.form-group {
+  transition: all 0.3s ease;
+}
+
+
+/* ---------- Button Pulse ---------- */
+@keyframes btnPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 168, 67, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(212, 168, 67, 0); }
+}
+
+#nav-cta {
+  animation: btnPulse 2.5s ease-in-out infinite;
+}
+
+
+/* ---------- Stat Items ---------- */
+.stat-item {
+  position: relative;
+}
+
+.stat-item::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+.stat-item:last-child::after {
+  display: none;
+}
+
+
+/* ---------- Footer ---------- */
+footer a:hover {
+  text-decoration: none;
+}
+
+
+/* ---------- Mobile Menu Animation ---------- */
+#mobile-menu {
+  transition: max-height 0.35s ease, opacity 0.35s ease;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+#mobile-menu.menu-open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+
+/* ---------- Scrollbar Customization ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f0e8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d6a4a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a4a2e;
+}
+
+
+/* ---------- Selection Color ---------- */
+::selection {
+  background: rgba(212, 168, 67, 0.25);
+  color: #1a4a2e;
+}
+
+
+/* ---------- Print Styles ---------- */
+@media print {
+  nav, footer { display: none; }
+  .hero-bg { background: white !important; }
+  .text-gradient-gold, .text-gradient-green {
+    -webkit-text-fill-color: #1a4a2e;
+    color: #1a4a2e;
+  }
+}

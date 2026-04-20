@@ -1,0 +1,29 @@
+# Dependencias de Node
+BackEnd/node_modules/
+node_modules/
+
+# Logs de mensajes (desarrollo) — NO incluir en git para privacidad
+# Comentar esta línea si deseas versionar los mensajes
+BackEnd/logs/mensajes.json
+
+# Variables de entorno
+.env
+.env.local
+.env.production
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/settings.json
+*.swp
+*.swo
+
+# Vercel
+.vercel/
+
+# Build artifacts
+dist/
+.next/

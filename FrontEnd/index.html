@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finca Villa Lida – Plántulas de Palma de Aceite Certificadas</title>
+  <meta name="description" content="Finca Villa Lida ofrece plántulas de Palma de Aceite de alta calidad con manejo nutricional de precisión. Previvero y Vivero certificados en Colombia." />
+  <meta name="keywords" content="plántulas palma de aceite, vivero palma africana, finca Villa Lida, agricultura Colombia" />
+  <meta property="og:title" content="Finca Villa Lida – Plántulas de Palma de Aceite" />
+  <meta property="og:description" content="Calidad certificada con manejo nutricional de precisión." />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'verde-finca': '#1a4a2e',
+            'verde-medio': '#2d6a4a',
+            'verde-claro': '#52b788',
+            'tierra': '#8B5E3C',
+            'tierra-claro': '#b07d52',
+            'dorado': '#D4A843',
+            'crema': '#f5f0e8',
+          },
+          fontFamily: {
+            'serif': ['Playfair Display', 'Georgia', 'serif'],
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.8s ease-out forwards',
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 3s ease-in-out infinite',
+            'spin-slow': 'spin 20s linear infinite',
+            'counter': 'counter 2s ease-out forwards',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(40px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-15px)' },
+            },
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body class="font-sans bg-crema text-gray-800 overflow-x-hidden">
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  NAVBAR                                -->
+  <!-- ═══════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 navbar-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#inicio" class="flex items-center gap-3 group" aria-label="Inicio">
+          <img src="./IMAGENES/LOGO/Logo de Finca Villa Lida.png"
+               alt="Logo Finca Villa Lida"
+               class="h-14 w-14 object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
+               id="nav-logo" />
+          <div>
+            <div class="text-white font-serif font-bold text-xl leading-tight nav-text-shadow">Villa Lida</div>
+            <div class="text-verde-claro text-xs font-medium tracking-widest uppercase">Palma de Aceite</div>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex items-center gap-8 list-none m-0 p-0">
+          <li><a href="#inicio" class="nav-link text-white font-medium hover:text-dorado transition-colors duration-300">Inicio</a></li>
+          <li><a href="#nosotros" class="nav-link text-white font-medium hover:text-dorado transition-colors duration-300">Nosotros</a></li>
+          <li><a href="#ciclo-vida" class="nav-link text-white font-medium hover:text-dorado transition-colors duration-300">Ciclo de Vida</a></li>
+          <li><a href="#galeria" class="nav-link text-white font-medium hover:text-dorado transition-colors duration-300">Galería</a></li>
+          <li><a href="#contacto" class="nav-link text-white font-medium hover:text-dorado transition-colors duration-300">Contacto</a></li>
+          <li>
+            <a href="#contacto" id="nav-cta"
+               class="bg-dorado text-verde-finca px-5 py-2.5 rounded-full font-bold
+                      hover:bg-yellow-400 hover:shadow-lg hover:scale-105
+                      transition-all duration-300 text-sm">
+              Solicitar Cotización
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Hamburger -->
+        <button id="menu-toggle" aria-label="Abrir menú"
+                class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors duration-300">
+          <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-verde-finca/98 backdrop-blur-md border-t border-white/10">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <a href="#inicio" class="mobile-link text-white font-medium py-2 border-b border-white/10 hover:text-dorado transition-colors">Inicio</a>
+        <a href="#nosotros" class="mobile-link text-white font-medium py-2 border-b border-white/10 hover:text-dorado transition-colors">Nosotros</a>
+        <a href="#ciclo-vida" class="mobile-link text-white font-medium py-2 border-b border-white/10 hover:text-dorado transition-colors">Ciclo de Vida</a>
+        <a href="#galeria" class="mobile-link text-white font-medium py-2 border-b border-white/10 hover:text-dorado transition-colors">Galería</a>
+        <a href="#contacto" class="mobile-link text-white font-medium py-2 hover:text-dorado transition-colors">Contacto</a>
+        <a href="#contacto" class="mobile-link bg-dorado text-verde-finca px-5 py-3 rounded-full font-bold text-center mt-2">Solicitar Cotización</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  HERO                                  -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background gradient layers -->
+    <div class="absolute inset-0 hero-bg"></div>
+    <div class="absolute inset-0 hero-overlay"></div>
+
+    <!-- Animated botanical SVG elements -->
+    <div class="absolute top-12 right-10 opacity-10 animate-spin-slow">
+      <svg width="300" height="300" viewBox="0 0 300 300" fill="none">
+        <circle cx="150" cy="150" r="140" stroke="#52b788" stroke-width="1.5" stroke-dasharray="20 10"/>
+        <circle cx="150" cy="150" r="100" stroke="#D4A843" stroke-width="1" stroke-dasharray="10 5"/>
+      </svg>
+    </div>
+    <div class="absolute bottom-20 left-10 opacity-10 animate-float">
+      <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+        <path d="M100 10 L190 190 L10 190 Z" stroke="#52b788" stroke-width="1.5" fill="none"/>
+        <path d="M100 40 L170 175 L30 175 Z" stroke="#D4A843" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <!-- Logo flotante -->
+      <div class="flex justify-center mb-8">
+        <div class="relative animate-float">
+          <div class="absolute inset-0 bg-dorado/20 rounded-full blur-2xl scale-150"></div>
+          <img src="./IMAGENES/LOGO/Logo de Finca Villa Lida.png"
+               alt="Logo Finca Villa Lida"
+               class="relative h-36 w-36 object-contain drop-shadow-2xl" />
+        </div>
+      </div>
+
+      <div class="reveal-on-scroll">
+        <p class="text-verde-claro text-sm font-semibold tracking-[0.3em] uppercase mb-4">
+          🌿 Calidad Certificada desde Colombia
+        </p>
+        <h1 class="font-serif font-bold text-white text-5xl sm:text-6xl lg:text-7xl mb-6 leading-tight">
+          Finca<br/>
+          <span class="text-gradient-gold">Villa Lida</span>
+        </h1>
+        <p class="text-xl sm:text-2xl text-white/80 mb-4 font-light max-w-3xl mx-auto leading-relaxed">
+          Plántulas de <strong class="text-verde-claro font-semibold">Palma de Aceite</strong> con manejo nutricional de precisión
+        </p>
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20
+                    rounded-full px-6 py-2.5 text-white text-sm font-medium mb-10">
+          <span class="w-2 h-2 bg-verde-claro rounded-full animate-pulse-slow"></span>
+          Previvero · Vivero · Calidad Garantizada
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#contacto" id="hero-cta-primary"
+             class="group bg-dorado hover:bg-yellow-400 text-verde-finca font-bold px-8 py-4
+                    rounded-full text-lg shadow-2xl shadow-dorado/30
+                    hover:shadow-dorado/50 hover:scale-105 transition-all duration-300">
+            <span class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+              </svg>
+              Solicitar Cotización
+            </span>
+          </a>
+          <a href="#ciclo-vida" id="hero-cta-secondary"
+             class="group bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4
+                    rounded-full text-lg border border-white/30 backdrop-blur-sm
+                    hover:scale-105 transition-all duration-300">
+            <span class="flex items-center gap-2">
+              Conocer Más
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50">
+      <span class="text-xs tracking-widest uppercase">Explorar</span>
+      <div class="scroll-indicator"></div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  STATS BAR                             -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="bg-verde-finca py-10 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="stat-item reveal-on-scroll">
+        <div class="text-dorado font-bold text-4xl font-serif" data-target="8">0</div>
+        <div class="text-verde-claro text-sm font-medium mt-1">Meses de Ciclo</div>
+      </div>
+      <div class="stat-item reveal-on-scroll" style="animation-delay:0.1s">
+        <div class="text-dorado font-bold text-4xl font-serif" data-target="100">0<span class="text-2xl">%</span></div>
+        <div class="text-verde-claro text-sm font-medium mt-1">Calidad Certificada</div>
+      </div>
+      <div class="stat-item reveal-on-scroll" style="animation-delay:0.2s">
+        <div class="text-dorado font-bold text-4xl font-serif">
+          <span data-target="2">0</span><span class="text-2xl"> Etapas</span>
+        </div>
+        <div class="text-verde-claro text-sm font-medium mt-1">Previvero & Vivero</div>
+      </div>
+      <div class="stat-item reveal-on-scroll" style="animation-delay:0.3s">
+        <div class="text-dorado font-bold text-4xl font-serif">🌿</div>
+        <div class="text-verde-claro text-sm font-medium mt-1">Manejo Nutricional</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  NOSOTROS                              -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="nosotros" class="py-24 px-6 bg-crema">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Text -->
+        <div class="reveal-on-scroll">
+          <span class="text-tierra text-sm font-semibold tracking-widest uppercase">Quiénes Somos</span>
+          <h2 class="font-serif font-bold text-verde-finca text-4xl sm:text-5xl mt-3 mb-6 leading-tight">
+            Tradición y tecnología<br/><em class="text-tierra">en cada plántula</em>
+          </h2>
+          <p class="text-gray-600 text-lg leading-relaxed mb-6">
+            <strong class="text-verde-finca">Finca Villa Lida</strong> es un emprendimiento agrícola especializado en
+            la producción de plántulas de <strong>Palma de Aceite</strong> (<em>Elaeis guineensis</em>) de alta calidad,
+            combinando el conocimiento técnico con el amor por la tierra colombiana.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            Nuestro mensaje central es claro: <strong class="text-verde-medio">"Calidad certificada con manejo
+            nutricional de precisión"</strong>. Cada plántula que sale de nuestro vivero ha sido cuidada
+            con protocolos rigurosos de nutrición, sanidad e identificación genética.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm border border-green-100">
+              <div class="w-10 h-10 bg-verde-finca/10 rounded-lg flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-verde-finca" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-verde-finca">Material Certificado</div>
+                <div class="text-sm text-gray-500">Semilla de origen garantizado</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm border border-amber-100">
+              <div class="w-10 h-10 bg-dorado/10 rounded-lg flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-tierra" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-tierra">Nutrición de Precisión</div>
+                <div class="text-sm text-gray-500">Protocolos técnicos validados</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Facebook link -->
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" id="fb-link"
+             class="inline-flex items-center gap-3 mt-8 bg-[#1877F2] hover:bg-[#1565d8]
+                    text-white px-6 py-3 rounded-full font-semibold
+                    hover:shadow-lg hover:scale-105 transition-all duration-300">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            Ver cotidianidad en Facebook
+          </a>
+        </div>
+
+        <!-- Visual card -->
+        <div class="reveal-on-scroll lg:pl-8">
+          <div class="relative">
+            <!-- Main card -->
+            <div class="bg-gradient-to-br from-verde-finca to-verde-medio rounded-3xl p-8 shadow-2xl">
+              <div class="text-center mb-6">
+                <img src="./IMAGENES/LOGO/Logo de Finca Villa Lida.png"
+                     alt="Villa Lida"
+                     class="h-28 w-28 object-contain mx-auto drop-shadow-xl" />
+                <h3 class="text-white font-serif text-2xl font-bold mt-4">Finca Villa Lida</h3>
+                <p class="text-verde-claro text-sm mt-1">Especialistas en Palma de Aceite</p>
+              </div>
+
+              <!-- Feature list -->
+              <ul class="space-y-3 list-none p-0 m-0">
+                <li class="flex items-center gap-3 text-white/90 text-sm">
+                  <span class="text-dorado text-lg">✓</span>
+                  Plántulas seleccionadas genotípicamente
+                </li>
+                <li class="flex items-center gap-3 text-white/90 text-sm">
+                  <span class="text-dorado text-lg">✓</span>
+                  Control fitosanitario riguroso
+                </li>
+                <li class="flex items-center gap-3 text-white/90 text-sm">
+                  <span class="text-dorado text-lg">✓</span>
+                  Fertilización según análisis de suelos
+                </li>
+                <li class="flex items-center gap-3 text-white/90 text-sm">
+                  <span class="text-dorado text-lg">✓</span>
+                  Sistema de riego tecnificado
+                </li>
+                <li class="flex items-center gap-3 text-white/90 text-sm">
+                  <span class="text-dorado text-lg">✓</span>
+                  Acompañamiento técnico post-venta
+                </li>
+              </ul>
+
+              <!-- Accent badge -->
+              <div class="mt-6 bg-dorado/20 border border-dorado/30 rounded-xl p-3 text-center">
+                <p class="text-dorado text-xs font-semibold tracking-wider uppercase">
+                  🏆 Calidad certificada · Producción tecnificada
+                </p>
+              </div>
+            </div>
+
+            <!-- Floating decoration -->
+            <div class="absolute -top-4 -right-4 w-20 h-20 bg-dorado/20 rounded-full blur-2xl"></div>
+            <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-verde-claro/20 rounded-full blur-xl"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  PRODUCTO ÚNICO                        -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="reveal-on-scroll">
+        <span class="text-tierra text-sm font-semibold tracking-widest uppercase">Nuestro Producto</span>
+        <h2 class="font-serif font-bold text-verde-finca text-4xl sm:text-5xl mt-3 mb-6">
+          Plántulas de<br/><span class="text-gradient-green">Palma de Aceite</span>
+        </h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto mb-14">
+          <em>Elaeis guineensis</em> — El cultivo oleaginoso más productivo del mundo,
+          con el mayor rendimiento de aceite por hectárea.
+        </p>
+      </div>
+
+      <!-- Product feature grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="product-card reveal-on-scroll group">
+          <div class="w-14 h-14 bg-verde-finca/10 rounded-2xl flex items-center justify-center mb-4 mx-auto
+                      group-hover:bg-verde-finca group-hover:scale-110 transition-all duration-300">
+            <span class="text-3xl">🌱</span>
+          </div>
+          <h3 class="font-serif font-bold text-verde-finca text-xl mb-2">Origen Genético</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Material de siembra de casas productoras reconocidas con altos índices de extractabilidad de aceite.
+          </p>
+        </div>
+
+        <div class="product-card reveal-on-scroll group" style="animation-delay:0.1s">
+          <div class="w-14 h-14 bg-tierra/10 rounded-2xl flex items-center justify-center mb-4 mx-auto
+                      group-hover:bg-tierra group-hover:scale-110 transition-all duration-300">
+            <span class="text-3xl">🧪</span>
+          </div>
+          <h3 class="font-serif font-bold text-verde-finca text-xl mb-2">Nutrición Controlada</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Programa de fertilización basado en análisis foliares y de sustrato para garantizar el desarrollo óptimo.
+          </p>
+        </div>
+
+        <div class="product-card reveal-on-scroll group" style="animation-delay:0.2s">
+          <div class="w-14 h-14 bg-dorado/10 rounded-2xl flex items-center justify-center mb-4 mx-auto
+                      group-hover:bg-dorado group-hover:scale-110 transition-all duration-300">
+            <span class="text-3xl">🛡️</span>
+          </div>
+          <h3 class="font-serif font-bold text-verde-finca text-xl mb-2">Sanidad Vegetal</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Protocolos fitosanitarios preventivos y curativos, con seguimiento de enfermedades del suelo y foliares.
+          </p>
+        </div>
+
+        <div class="product-card reveal-on-scroll group" style="animation-delay:0.15s">
+          <div class="w-14 h-14 bg-verde-claro/20 rounded-2xl flex items-center justify-center mb-4 mx-auto
+                      group-hover:bg-verde-claro group-hover:scale-110 transition-all duration-300">
+            <span class="text-3xl">💧</span>
+          </div>
+          <h3 class="font-serif font-bold text-verde-finca text-xl mb-2">Riego Tecnificado</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Sistema de riego por aspersión o goteo calibrado según requerimientos hídricos por etapa de crecimiento.
+          </p>
+        </div>
+
+        <div class="product-card reveal-on-scroll group" style="animation-delay:0.25s">
+          <div class="w-14 h-14 bg-verde-finca/10 rounded-2xl flex items-center justify-center mb-4 mx-auto
+                      group-hover:bg-verde-finca group-hover:scale-110 transition-all duration-300">
+            <span class="text-3xl">📋</span>
+          </div>
+          <h3 class="font-serif font-bold text-verde-finca text-xl mb-2">Trazabilidad</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Registro detallado de cada lote: fecha de germinación, tratamientos aplicados y condiciones de crecimiento.
+          </p>
+        </div>
+
+        <div class="product-card reveal-on-scroll group" style="animation-delay:0.35s">
+          <div class="w-14 h-14 bg-tierra/10 rounded-2xl flex items-center justify-center mb-4 mx-auto
+                      group-hover:bg-tierra group-hover:scale-110 transition-all duration-300">
+            <span class="text-3xl">🤝</span>
+          </div>
+          <h3 class="font-serif font-bold text-verde-finca text-xl mb-2">Soporte Técnico</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Asesoría en establecimiento de plantación, manejo nutricional y sanidad durante los primeros meses del cultivo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  CICLO DE VIDA                         -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="ciclo-vida" class="py-24 px-6 bg-crema relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-verde-claro/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 bg-dorado/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="text-center mb-16 reveal-on-scroll">
+        <span class="text-tierra text-sm font-semibold tracking-widest uppercase">Proceso de Producción</span>
+        <h2 class="font-serif font-bold text-verde-finca text-4xl sm:text-5xl mt-3 mb-4">
+          Ciclo de Vida de la Plántula
+        </h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+          Desde la semilla hasta el campo, acompañamos cada etapa con rigor técnico y pasión por el cultivo.
+        </p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="relative">
+        <!-- Center line (desktop) -->
+        <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-verde-claro via-dorado to-tierra -translate-x-1/2"></div>
+
+        <!-- ETAPA 1: Previvero -->
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16">
+          <div class="reveal-on-scroll lg:text-right lg:pr-16">
+            <div class="inline-flex items-center gap-2 bg-verde-claro/10 border border-verde-claro/20
+                        rounded-full px-4 py-1.5 text-verde-medio text-sm font-semibold mb-4">
+              <span class="w-2 h-2 bg-verde-claro rounded-full"></span>
+              Etapa 1
+            </div>
+            <h3 class="font-serif font-bold text-verde-finca text-3xl mb-4">
+              Previvero
+              <span class="block text-verde-claro text-lg font-normal mt-1">Meses 1 – 4</span>
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              La semilla germinada se establece en bolsas pequeñas con sustrato especializado.
+              Durante esta fase crítica, las plántulas desarrollan su sistema radicular primario
+              y sus primeras hojas funcionales bajo condiciones de sombra controlada.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-500 list-none p-0 m-0 lg:flex lg:flex-col lg:items-end">
+              <li class="flex items-center gap-2 lg:flex-row-reverse">
+                <span class="text-verde-claro font-bold">✓</span> Germinación y establecimiento
+              </li>
+              <li class="flex items-center gap-2 lg:flex-row-reverse">
+                <span class="text-verde-claro font-bold">✓</span> Bolsas de polietileno 6"×8"
+              </li>
+              <li class="flex items-center gap-2 lg:flex-row-reverse">
+                <span class="text-verde-claro font-bold">✓</span> Sombra al 50–70%
+              </li>
+              <li class="flex items-center gap-2 lg:flex-row-reverse">
+                <span class="text-verde-claro font-bold">✓</span> Fertilización líquida semanal
+              </li>
+            </ul>
+          </div>
+
+          <!-- Timeline node -->
+          <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center justify-center
+                      w-14 h-14 bg-verde-claro rounded-full shadow-lg shadow-verde-claro/30
+                      border-4 border-crema z-10" style="top: 80px">
+            <span class="text-white font-bold text-lg">1</span>
+          </div>
+
+          <div class="reveal-on-scroll lg:pl-16">
+            <div class="lifecycle-card previvero-card rounded-3xl p-6 shadow-xl">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-verde-finca rounded-xl flex items-center justify-center">
+                  <span class="text-2xl">🌿</span>
+                </div>
+                <div>
+                  <div class="font-bold text-verde-finca">PREVIVERO</div>
+                  <div class="text-xs text-gray-400">Primeros 4 meses</div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-verde-finca/5 rounded-xl p-3 text-center">
+                  <div class="text-2xl font-bold text-verde-finca">1-4</div>
+                  <div class="text-xs text-gray-500">Meses</div>
+                </div>
+                <div class="bg-verde-claro/10 rounded-xl p-3 text-center">
+                  <div class="text-2xl font-bold text-verde-medio">2-3</div>
+                  <div class="text-xs text-gray-500">Hojas emitidas</div>
+                </div>
+                <div class="bg-tierra/10 rounded-xl p-3 text-center">
+                  <div class="text-2xl font-bold text-tierra">6"×8"</div>
+                  <div class="text-xs text-gray-500">Bolsa inicial</div>
+                </div>
+                <div class="bg-dorado/10 rounded-xl p-3 text-center">
+                  <div class="text-2xl font-bold text-tierra-claro">50%</div>
+                  <div class="text-xs text-gray-500">Sombrío</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ETAPA 2: Vivero -->
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div class="reveal-on-scroll order-2 lg:order-1 lg:pr-16">
+            <div class="lifecycle-card vivero-card rounded-3xl p-6 shadow-xl">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-tierra rounded-xl flex items-center justify-center">
+                  <span class="text-2xl">🌴</span>
+                </div>
+                <div>
+                  <div class="font-bold text-verde-finca">VIVERO</div>
+                  <div class="text-xs text-gray-400">Mes 4 en adelante</div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-tierra/10 rounded-xl p-3 text-center">
+                  <div class="text-2xl font-bold text-tierra">4+</div>
+                  <div class="text-xs text-gray-500">Meses</div>
+                </div>
+                <div class="bg-verde-finca/5 rounded-xl p-3 text-center">
+                  <div class="text-2xl font-bold text-verde-finca">6-8</div>
+                  <div class="text-xs text-gray-500">Hojas emitidas</div>
+                </div>
+                <div class="bg-dorado/10 rounded-xl p-3 text-center">
+                  <div class="text-2xl font-bold text-tierra-claro">12"</div>
+                  <div class="text-xs text-gray-500">Bolsa final</div>
+                </div>
+                <div class="bg-verde-claro/10 rounded-xl p-3 text-center">
+                  <div class="text-2xl font-bold text-verde-medio">Sol</div>
+                  <div class="text-xs text-gray-500">Plena exposición</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline node -->
+          <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center justify-center
+                      w-14 h-14 bg-tierra rounded-full shadow-lg shadow-tierra/30
+                      border-4 border-crema z-10" style="bottom: 80px">
+            <span class="text-white font-bold text-lg">2</span>
+          </div>
+
+          <div class="reveal-on-scroll order-1 lg:order-2 lg:pl-16">
+            <div class="inline-flex items-center gap-2 bg-tierra/10 border border-tierra/20
+                        rounded-full px-4 py-1.5 text-tierra text-sm font-semibold mb-4">
+              <span class="w-2 h-2 bg-tierra rounded-full"></span>
+              Etapa 2
+            </div>
+            <h3 class="font-serif font-bold text-verde-finca text-3xl mb-4">
+              Vivero
+              <span class="block text-tierra text-lg font-normal mt-1">Mes 4 en adelante</span>
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Las plántulas son trasladadas a bolsas de mayor capacidad y expuestas progresivamente
+              al sol pleno. En esta fase se realiza la selección fenotípica, eliminando aquellas
+              que no cumplen los estándares de desarrollo esperados.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-500 list-none p-0 m-0">
+              <li class="flex items-center gap-2">
+                <span class="text-tierra font-bold">✓</span> Trasplante a bolsa 12"×12"
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-tierra font-bold">✓</span> Selección fenotípica rigurosa
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-tierra font-bold">✓</span> Fertilización granular controlada
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-tierra font-bold">✓</span> Adaptación a plena exposición solar
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-tierra font-bold">✓</span> Lista para campo a los 8-10 meses
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  CTA BANNER                            -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="py-20 px-6 cta-bg relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-10 left-10 text-white text-9xl font-serif opacity-30">🌴</div>
+      <div class="absolute bottom-10 right-10 text-white text-9xl font-serif opacity-30">🌿</div>
+    </div>
+    <div class="max-w-3xl mx-auto text-center relative z-10 reveal-on-scroll">
+      <h2 class="font-serif font-bold text-white text-4xl sm:text-5xl mb-4">
+        ¿Listo para establecer<br/>tu plantación de palma?
+      </h2>
+      <p class="text-white/80 text-lg mb-8">
+        Contáctenos hoy mismo y le asesoraremos sobre la cantidad, calidad y logística de entrega de sus plántulas.
+      </p>
+      <a href="#contacto" id="cta-banner-btn"
+         class="inline-block bg-white text-verde-finca font-bold px-10 py-4 rounded-full text-lg
+                hover:bg-dorado hover:text-verde-finca hover:shadow-2xl hover:scale-105
+                transition-all duration-300 shadow-xl">
+        Solicitar Cotización Ahora
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  GALERÍA / FACEBOOK                    -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="galeria" class="py-24 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14 reveal-on-scroll">
+        <span class="text-tierra text-sm font-semibold tracking-widest uppercase">Cotidianidad Tecnificada</span>
+        <h2 class="font-serif font-bold text-verde-finca text-4xl sm:text-5xl mt-3 mb-4">
+          Vida en la Finca
+        </h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+          Seguinos en Facebook para ver el día a día de nuestra producción: manejo, crecimiento y más.
+        </p>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" id="fb-gallery-link"
+           class="inline-flex items-center gap-2 mt-6 bg-[#1877F2] hover:bg-[#1565d8]
+                  text-white px-6 py-3 rounded-full font-semibold
+                  hover:shadow-lg hover:scale-105 transition-all duration-300">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          Seguir en Facebook
+        </a>
+      </div>
+
+      <!-- Showcase cards -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="gallery-card reveal-on-scroll group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+          <div class="h-48 bg-gradient-to-br from-verde-finca to-verde-medio flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20 text-8xl flex items-center justify-center">🌱</div>
+            <div class="relative z-10 text-center text-white p-4">
+              <div class="text-5xl mb-2">🌱</div>
+              <div class="font-semibold">Previvero</div>
+              <div class="text-xs opacity-70">Primeras semanas</div>
+            </div>
+          </div>
+          <div class="p-4 bg-white border-t border-gray-100">
+            <p class="text-sm text-gray-600">Plántulas en su primera etapa, desarrollando su sistema radicular en condiciones controladas.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card reveal-on-scroll group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" style="animation-delay:0.15s">
+          <div class="h-48 bg-gradient-to-br from-tierra to-tierra-claro flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20 text-8xl flex items-center justify-center">🌿</div>
+            <div class="relative z-10 text-center text-white p-4">
+              <div class="text-5xl mb-2">🌿</div>
+              <div class="font-semibold">Nutrición</div>
+              <div class="text-xs opacity-70">Manejo de precisión</div>
+            </div>
+          </div>
+          <div class="p-4 bg-white border-t border-gray-100">
+            <p class="text-sm text-gray-600">Aplicación de fertilizantes basada en análisis foliares para un crecimiento óptimo.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card reveal-on-scroll group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" style="animation-delay:0.3s">
+          <div class="h-48 bg-gradient-to-br from-dorado to-yellow-500 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20 text-8xl flex items-center justify-center">🌴</div>
+            <div class="relative z-10 text-center text-verde-finca p-4">
+              <div class="text-5xl mb-2">🌴</div>
+              <div class="font-semibold">Vivero Final</div>
+              <div class="text-xs opacity-70">Listas para el campo</div>
+            </div>
+          </div>
+          <div class="p-4 bg-white border-t border-gray-100">
+            <p class="text-sm text-gray-600">Plántulas vigorosas y seleccionadas, listas para establecer su plantación definitiva.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  CONTACTO                              -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="contacto" class="py-24 px-6 bg-crema relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-verde-finca via-verde-claro to-dorado"></div>
+
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
+        <!-- Info left -->
+        <div class="reveal-on-scroll">
+          <span class="text-tierra text-sm font-semibold tracking-widest uppercase">Contáctenos</span>
+          <h2 class="font-serif font-bold text-verde-finca text-4xl sm:text-5xl mt-3 mb-6 leading-tight">
+            Hablemos de<br/><span class="text-tierra">su proyecto</span>
+          </h2>
+          <p class="text-gray-600 text-lg leading-relaxed mb-8">
+            Cuéntenos sus necesidades: cantidad de plántulas, área a sembrar, zona geográfica
+            y cualquier detalle relevante. Le responderemos con prontitud con una propuesta personalizada.
+          </p>
+
+          <!-- Contact details -->
+          <div class="space-y-5">
+            <div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100
+                        hover:border-verde-claro transition-colors duration-300">
+              <div class="w-12 h-12 bg-[#25D366]/10 rounded-xl flex items-center justify-center shrink-0">
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="#25D366">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.126 1.531 5.869L0 24l6.321-1.499A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.562 17.072l-.047.063c-.693.924-1.634 1.521-2.694 1.704-.643.111-1.457.108-2.323-.147-.524-.158-1.168-.382-2.022-.751-3.56-1.538-5.876-5.08-6.053-5.32-.177-.239-1.44-1.92-1.44-3.664 0-1.744.913-2.601 1.235-2.957.323-.357.704-.446.94-.446.235 0 .47.002.676.012.216.01.506-.082.793.604l1.019 2.527c.079.198.132.43.003.689-.129.26-.193.421-.387.648l-.581.674c-.198.224-.405.464-.173.91.231.446.972 1.598 2.083 2.589 1.432 1.276 2.638 1.672 3.012 1.858.374.186.593.155.812-.094.22-.248.938-1.094 1.188-1.47.25-.375.498-.313.838-.188l2.678 1.262c.375.188.626.283.693.438.067.155.067.896-.246 1.759z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider">WhatsApp</div>
+                <div class="font-medium text-verde-finca">Contáctenos por WhatsApp</div>
+                <div class="text-sm text-gray-500">Respuesta rápida garantizada</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100
+                        hover:border-dorado transition-colors duration-300">
+              <div class="w-12 h-12 bg-dorado/10 rounded-xl flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6 text-tierra" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Correo</div>
+                <div class="font-medium text-verde-finca">Escríbanos</div>
+                <div class="text-sm text-gray-500">Le respondemos en 24 horas</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100
+                        hover:border-blue-300 transition-colors duration-300">
+              <div class="w-12 h-12 bg-[#1877F2]/10 rounded-xl flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6" fill="#1877F2" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Facebook</div>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                   id="fb-contact-link"
+                   class="font-medium text-[#1877F2] hover:underline">
+                  Finca Villa Lida
+                </a>
+                <div class="text-sm text-gray-500">Cotidianidad tecnificada</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="reveal-on-scroll">
+          <div class="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100 relative overflow-hidden">
+            <!-- Top accent -->
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-verde-finca to-dorado"></div>
+
+            <div class="flex items-center gap-3 mb-8">
+              <div class="w-10 h-10 bg-verde-finca/10 rounded-xl flex items-center justify-center">
+                <svg class="w-5 h-5 text-verde-finca" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-verde-finca text-lg">Formulario de Contacto</h3>
+                <p class="text-gray-400 text-xs">Todos los campos son obligatorios</p>
+              </div>
+            </div>
+
+            <!-- SUCCESS MESSAGE (hidden by default) -->
+            <div id="form-success" class="hidden mb-6 bg-verde-claro/10 border border-verde-claro/30 rounded-xl p-5 text-center">
+              <div class="text-3xl mb-2">✅</div>
+              <div class="font-bold text-verde-finca text-lg">¡Mensaje enviado exitosamente!</div>
+              <p class="text-gray-600 text-sm mt-1">Le responderemos a la brevedad posible.</p>
+            </div>
+
+            <!-- ERROR MESSAGE (hidden by default) -->
+            <div id="form-error" class="hidden mb-6 bg-red-50 border border-red-200 rounded-xl p-5 text-center">
+              <div class="text-3xl mb-2">⚠️</div>
+              <div class="font-bold text-red-700 text-lg">Error al enviar</div>
+              <p class="text-gray-600 text-sm mt-1">Por favor intente de nuevo o contáctenos por WhatsApp.</p>
+            </div>
+
+            <form id="contacto-form" novalidate>
+              <div class="space-y-5">
+                <!-- Nombre -->
+                <div class="form-group">
+                  <label for="nombre" class="block text-sm font-semibold text-gray-700 mb-1.5">
+                    Nombre Completo <span class="text-red-500">*</span>
+                  </label>
+                  <div class="relative">
+                    <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400">
+                      <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                      </svg>
+                    </span>
+                    <input type="text" id="nombre" name="nombre"
+                           class="form-input pl-10 w-full px-4 py-3 rounded-xl border border-gray-200
+                                  focus:border-verde-claro focus:ring-2 focus:ring-verde-claro/20
+                                  outline-none transition-all duration-300 text-gray-700 bg-gray-50"
+                           placeholder="Nombre y apellido"
+                           required autocomplete="name" />
+                  </div>
+                  <p class="field-error text-red-500 text-xs mt-1 hidden">Por favor ingrese su nombre.</p>
+                </div>
+
+                <!-- Teléfono WhatsApp -->
+                <div class="form-group">
+                  <label for="telefono" class="block text-sm font-semibold text-gray-700 mb-1.5">
+                    <span class="flex items-center gap-2">
+                      WhatsApp / Teléfono <span class="text-red-500">*</span>
+                      <span class="inline-flex items-center bg-[#25D366]/10 text-[#128C7E] text-xs px-2 py-0.5 rounded-full font-semibold">
+                        📱 WhatsApp preferido
+                      </span>
+                    </span>
+                  </label>
+                  <div class="relative">
+                    <span class="absolute left-3.5 top-1/2 -translate-y-1/2">
+                      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#25D366">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.126 1.531 5.869L0 24l6.321-1.499A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.562 17.072l-.047.063c-.693.924-1.634 1.521-2.694 1.704-.643.111-1.457.108-2.323-.147-.524-.158-1.168-.382-2.022-.751-3.56-1.538-5.876-5.08-6.053-5.32-.177-.239-1.44-1.92-1.44-3.664 0-1.744.913-2.601 1.235-2.957.323-.357.704-.446.94-.446.235 0 .47.002.676.012.216.01.506-.082.793.604l1.019 2.527c.079.198.132.43.003.689-.129.26-.193.421-.387.648l-.581.674c-.198.224-.405.464-.173.91.231.446.972 1.598 2.083 2.589 1.432 1.276 2.638 1.672 3.012 1.858.374.186.593.155.812-.094.22-.248.938-1.094 1.188-1.47.25-.375.498-.313.838-.188l2.678 1.262c.375.188.626.283.693.438.067.155.067.896-.246 1.759z"/>
+                      </svg>
+                    </span>
+                    <input type="tel" id="telefono" name="telefono"
+                           class="form-input pl-10 w-full px-4 py-3 rounded-xl border border-gray-200
+                                  focus:border-[#25D366] focus:ring-2 focus:ring-[#25D366]/20
+                                  outline-none transition-all duration-300 text-gray-700 bg-gray-50"
+                           placeholder="+57 300 000 0000"
+                           required autocomplete="tel" />
+                  </div>
+                  <p class="field-error text-red-500 text-xs mt-1 hidden">Por favor ingrese un número de teléfono/WhatsApp.</p>
+                </div>
+
+                <!-- Correo -->
+                <div class="form-group">
+                  <label for="correo" class="block text-sm font-semibold text-gray-700 mb-1.5">
+                    Correo Electrónico <span class="text-red-500">*</span>
+                  </label>
+                  <div class="relative">
+                    <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400">
+                      <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                      </svg>
+                    </span>
+                    <input type="email" id="correo" name="email"
+                           class="form-input pl-10 w-full px-4 py-3 rounded-xl border border-gray-200
+                                  focus:border-verde-claro focus:ring-2 focus:ring-verde-claro/20
+                                  outline-none transition-all duration-300 text-gray-700 bg-gray-50"
+                           placeholder="correo@ejemplo.com"
+                           required autocomplete="email" />
+                  </div>
+                  <p class="field-error text-red-500 text-xs mt-1 hidden">Por favor ingrese un correo válido.</p>
+                </div>
+
+                <!-- Mensaje -->
+                <div class="form-group">
+                  <label for="mensaje" class="block text-sm font-semibold text-gray-700 mb-1.5">
+                    Mensaje / Solicitud <span class="text-red-500">*</span>
+                  </label>
+                  <textarea id="mensaje" name="message" rows="4"
+                            class="form-input w-full px-4 py-3 rounded-xl border border-gray-200
+                                   focus:border-verde-claro focus:ring-2 focus:ring-verde-claro/20
+                                   outline-none transition-all duration-300 text-gray-700 bg-gray-50 resize-none"
+                            placeholder="Cuéntenos sobre su proyecto: ¿Cuántas plántulas necesita? ¿Área a sembrar? ¿Zona geográfica?"
+                            required></textarea>
+                  <p class="field-error text-red-500 text-xs mt-1 hidden">Por favor ingrese su mensaje.</p>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" id="submit-btn"
+                        class="w-full bg-verde-finca hover:bg-verde-medio text-white font-bold py-4 rounded-xl
+                               hover:shadow-lg hover:shadow-verde-finca/30 hover:scale-[1.02]
+                               transition-all duration-300 flex items-center justify-center gap-2 text-lg">
+                  <svg id="submit-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                  </svg>
+                  <svg id="submit-spinner" class="w-5 h-5 animate-spin hidden" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+                  </svg>
+                  <span id="submit-text">Enviar Mensaje</span>
+                </button>
+
+                <p class="text-center text-xs text-gray-400 mt-2">
+                  🔒 Su información está protegida y no será compartida con terceros.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  FOOTER                                -->
+  <!-- ═══════════════════════════════════════ -->
+  <footer class="bg-verde-finca text-white py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="./IMAGENES/LOGO/Logo de Finca Villa Lida.png"
+                 alt="Logo Villa Lida"
+                 class="h-14 w-14 object-contain" />
+            <div>
+              <div class="font-serif font-bold text-xl">Finca Villa Lida</div>
+              <div class="text-verde-claro text-xs">Plántulas de Palma de Aceite</div>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed">
+            Calidad certificada con manejo nutricional de precisión. Producción tecnificada para el palmicultor colombiano.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="font-semibold text-dorado mb-4 uppercase text-xs tracking-widest">Navegación</h4>
+          <ul class="space-y-2 list-none p-0 m-0">
+            <li><a href="#inicio" class="text-white/60 hover:text-dorado text-sm transition-colors">Inicio</a></li>
+            <li><a href="#nosotros" class="text-white/60 hover:text-dorado text-sm transition-colors">Nosotros</a></li>
+            <li><a href="#ciclo-vida" class="text-white/60 hover:text-dorado text-sm transition-colors">Ciclo de Vida</a></li>
+            <li><a href="#galeria" class="text-white/60 hover:text-dorado text-sm transition-colors">Galería</a></li>
+            <li><a href="#contacto" class="text-white/60 hover:text-dorado text-sm transition-colors">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact summary -->
+        <div>
+          <h4 class="font-semibold text-dorado mb-4 uppercase text-xs tracking-widest">Contacto</h4>
+          <div class="space-y-3">
+            <div class="flex items-center gap-2 text-white/60 text-sm">
+              <span>📱</span> WhatsApp disponible
+            </div>
+            <div class="flex items-center gap-2 text-white/60 text-sm">
+              <span>📧</span> Respuesta en 24h
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span>📘</span>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                 id="fb-footer-link"
+                 class="text-[#74AAFF] hover:text-white transition-colors">
+                Finca Villa Lida en Facebook
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-white/40 text-sm">
+          © 2025 Finca Villa Lida. Todos los derechos reservados.
+        </p>
+        <p class="text-white/30 text-xs">
+          Hecho con 🌿 para la palmicultura colombiana
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

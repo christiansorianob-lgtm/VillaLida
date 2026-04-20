@@ -1,0 +1,16 @@
+{
+  "name": "finca-villa-lida",
+  "version": "1.0.0",
+  "description": "Backend de Finca Villa Lida – Plántulas de Palma de Aceite",
+  "private": true,
+  "engines": {
+    "node": ">=18.x"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.0"
+  },
+  "scripts": {
+    "start": "node BackEnd/api/contact.js",
+    "dev": "node -e \"const h=require('./BackEnd/api/contact'); require('http').createServer((req,res)=>h(req,res)).listen(3001,()=>console.log('BackEnd API on http://localhost:3001'))\""
+  }
+}
