@@ -308,7 +308,144 @@ window.addEventListener('scroll', () => {
 
 // ─── 9. INIT ─────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  // Trigger initial scroll check
   updateActiveNavLink();
   console.log('%c🌿 Finca Villa Lida — Página cargada', 'color: #2d6a4a; font-size:14px; font-weight:bold;');
 });
+
+
+// ═══════════════════════════════════════════════
+//  10. GALERÍA INTERACTIVA — LIGHTBOX + FILTROS
+// ═══════════════════════════════════════════════
+
+let currentLightboxIndex = 0;
+let visibleItems = [];
+
+function buildVisibleItems() {
+  visibleItems = Array.from(document.querySelectorAll('#gallery-grid .gallery-item:not(.hidden-item)'));
+}
+
+function openLightbox(indexInGrid) {
+  buildVisibleItems();
+  // Find clicked item's position in visibleItems
+  const allItems = Array.from(document.querySelectorAll('#gallery-grid .gallery-item'));
+  const clickedItem = allItems[indexInGrid];
+  const visibleIndex = visibleItems.indexOf(clickedItem);
+  currentLightboxIndex = visibleIndex >= 0 ? visibleIndex : 0;
+
+  showLightboxImage(currentLightboxIndex);
+
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+}
+
+function showLightboxImage(index) {
+  const item = visibleItems[index];
+  if (!item) return;
+
+  const src   = item.dataset.src;
+  const title = item.dataset.title || '';
+  const desc  = item.dataset.desc  || '';
+  const total = visibleItems.length;
+
+  const img     = document.getElementById('lightbox-img');
+  const spinner = document.getElementById('lightbox-spinner');
+  const titleEl = document.getElementById('lightbox-title');
+  const descEl  = document.getElementById('lightbox-desc');
+  const counter = document.getElementById('lightbox-counter');
+
+  // Show spinner, hide image
+  img.classList.add('loading');
+  spinner.classList.add('is-visible');
+
+  // Update caption
+  titleEl.innerHTML = title;
+  descEl.innerHTML  = desc;
+  counter.textContent = `${index + 1} / ${total}`;
+
+  // Load image
+  const newImg = new Image();
+  newImg.onload = () => {
+    img.src = src;
+    img.classList.remove('loading');
+    spinner.classList.remove('is-visible');
+  };
+  newImg.onerror = () => {
+    img.src = src; // try anyway
+    img.classList.remove('loading');
+    spinner.classList.remove('is-visible');
+  };
+  newImg.src = src;
+}
+
+function changeLightbox(direction) {
+  const newIndex = (currentLightboxIndex + direction + visibleItems.length) % visibleItems.length;
+  currentLightboxIndex = newIndex;
+  showLightboxImage(currentLightboxIndex);
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.remove('is-open');
+  document.body.style.overflow = '';
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  const lightbox = document.getElementById('lightbox');
+  if (!lightbox || !lightbox.classList.contains('is-open')) return;
+
+  if (e.key === 'ArrowRight') changeLightbox(1);
+  if (e.key === 'ArrowLeft')  changeLightbox(-1);
+  if (e.key === 'Escape')     closeLightbox();
+});
+
+// Touch/swipe support for mobile
+(function() {
+  let touchStartX = 0;
+  document.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+
+  document.addEventListener('touchend', (e) => {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox || !lightbox.classList.contains('is-open')) return;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) {
+      changeLightbox(dx < 0 ? 1 : -1);
+    }
+  }, { passive: true });
+})();
+
+// Gallery filter function
+function filterGallery(category) {
+  const items = document.querySelectorAll('#gallery-grid .gallery-item');
+  const btns  = document.querySelectorAll('.gallery-filter-btn');
+
+  // Update active button
+  btns.forEach(btn => {
+    if (btn.dataset.filter === category) {
+      btn.classList.add('active-filter');
+      btn.style.cssText = 'background:#1a4a2e!important;color:#fff!important;border-color:#1a4a2e!important;box-shadow:0 4px 15px rgba(26,74,46,0.35)';
+    } else {
+      btn.classList.remove('active-filter');
+      btn.style.cssText = '';
+    }
+  });
+
+  // Show/hide items with animation
+  items.forEach((item, i) => {
+    const cat = item.dataset.category;
+    const show = category === 'todas' || cat === category;
+
+    if (show) {
+      item.classList.remove('hidden-item');
+      item.style.animation = `fadeUp 0.5s ease-out ${i * 0.05}s both`;
+    } else {
+      item.classList.add('hidden-item');
+    }
+  });
+
+  buildVisibleItems();
+}
+
